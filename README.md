@@ -40,8 +40,6 @@ uv run pytest
 
 ### Publishing
 
-```sh
-rm -rf dist
-uv build
-uv publish --username __token__
-```
+Publishing is automated: [create a GitHub release](https://github.com/erikbrinkman/homeotopy/releases/new)
+and the `publish` workflow builds the distributions and uploads them to PyPI via
+[trusted publishing](https://docs.pypi.org/trusted-publishers/) (no API token).
