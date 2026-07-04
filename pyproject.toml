@@ -4,7 +4,7 @@ version = "0.5.0"
 description = "A library for computing homeomorphisms between some common standard topologies"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["numba>=0.61.0"]
+dependencies = ["numba>=0.61.0", "numpy>=2.0"]
 keywords = [
     "homeomorphism",
     "sphere",
