@@ -23,7 +23,7 @@ points = ...
 mapping = homeotopy.homeomorphism(homeotopy.simplex(), homeotopy.sphere())
 sphere_points = mapping(points)
 
-rev_mapping = reversed(mapping)
+rev_mapping = ~mapping
 duplicate_points = rev_mapping(sphere_points)
 ```
 
