@@ -1,8 +1,8 @@
 # Homotopy
 
-[![build](https://github.com/erikbrinkman/homeotopy/actions/workflows/python-package.yml/badge.svg)](https://github.com/erikbrinkman/homeotopy/actions/workflows/python-package.yml)
+[![build](https://github.com/hafaio/homeotopy/actions/workflows/build.yml/badge.svg)](https://github.com/hafaio/homeotopy/actions/workflows/build.yml)
 [![pypi](https://img.shields.io/pypi/v/homeotopy)](https://pypi.org/project/homeotopy/)
-[![docs](https://img.shields.io/badge/api-docs-blue)](https://erikbrinkman.github.io/homeotopy)
+[![docs](https://img.shields.io/badge/api-docs-blue)](https://hafaio.github.io/homeotopy)
 
 A python library for computing homeomorphisms between some common continuous
 spaces.
