@@ -40,6 +40,8 @@ uv run pytest
 
 ### Publishing
 
-Publishing is automated: [create a GitHub release](https://github.com/erikbrinkman/homeotopy/releases/new)
-and the `publish` workflow builds the distributions and uploads them to PyPI via
-[trusted publishing](https://docs.pypi.org/trusted-publishers/) (no API token).
+Releases are cut manually: run the [`release` workflow](https://github.com/hafaio/homeotopy/actions/workflows/release.yml)
+from the Actions tab and pick a version bump (patch/minor/major). It runs the checks,
+bumps the version, builds and publishes to PyPI via
+[trusted publishing](https://docs.pypi.org/trusted-publishers/) (no API token), tags the
+release, and deploys the docs.
