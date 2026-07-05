@@ -1,0 +1,44 @@
+# Build and publish the package to PyPI on release via trusted publishing.
+# See: https://docs.pypi.org/trusted-publishers/
+name: publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.2.0
+        with:
+          enable-cache: true
+          python-version: "3.12"
+      - name: Build distributions
+        run: uv build
+      - name: Upload distributions
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    # Publish from a dedicated environment so the OIDC token is scoped to a job
+    # that only uploads the built artifacts and runs no project build code.
+    environment:
+      name: pypi
+      url: https://pypi.org/project/homeotopy/
+    permissions:
+      id-token: write # required for trusted publishing
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
