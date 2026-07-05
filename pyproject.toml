@@ -30,7 +30,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.pyright]
-struct = ["homeotopy", "tests"]
+strict = ["homeotopy", "tests"]
 
 [tool.ruff.lint]
 extend-select = ["I", "D", "A", "B", "W", "PL", "UP", "FIX"]
