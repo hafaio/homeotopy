@@ -3,6 +3,8 @@ name = "homeotopy"
 version = "0.6.0"
 description = "A library for computing homeomorphisms between some common standard topologies"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.12"
 dependencies = ["numba>=0.61.0", "numpy>=2.0"]
 keywords = [
@@ -13,6 +15,11 @@ keywords = [
     "hypercube",
     "simplex",
 ]
+
+[project.urls]
+homepage = "https://github.com/hafaio/homeotopy"
+documentation = "https://hafaio.github.io/homeotopy"
+repository = "https://github.com/hafaio/homeotopy"
 
 [dependency-groups]
 dev = [
