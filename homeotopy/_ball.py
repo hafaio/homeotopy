@@ -19,7 +19,7 @@ class Ball(Topology):
 
     def __post_init__(self) -> None:
         if self.p <= 0:
-            raise ValueError(f"p must be greater than or equal to 0: {self.p:g}")
+            raise ValueError(f"p must be greater than 0: {self.p:g}")
 
     def to_inf_ball(self, points: NDArray[np.float64]) -> NDArray[np.float64]:
         if self.p == math.inf:
