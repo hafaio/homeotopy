@@ -23,17 +23,17 @@ from ._simplex import Simplex, simplex
 from ._sphere import Sphere, sphere
 
 __all__ = (
-    "Homeomorphism",
-    "Topology",
-    "homeomorphism",
     "Ball",
-    "ball",
     "Cube",
-    "cube",
+    "Homeomorphism",
     "Plane",
-    "plane",
-    "Sphere",
-    "sphere",
     "Simplex",
+    "Sphere",
+    "Topology",
+    "ball",
+    "cube",
+    "homeomorphism",
+    "plane",
     "simplex",
+    "sphere",
 )
